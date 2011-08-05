@@ -1,0 +1,26 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" xmlns:a="http://ajax.org/2005/aml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Title</title>
+<script src="apf_debug.js"></script>
+<a:skin src="skins/platform/skins.xml" media-path="images/" icon-path="icons/" />
+    </head>
+    <body>
+    <a:model id="mdlNews">
+    <data>
+        <news title="text 1" subtitle="text 11" date="2009-11-18"></news>
+        <news title="text 2" subtitle="text 21" date="2009-11-19"></news>
+        <news title="text 3" subtitle="text 31" date="2009-11-20"></news>
+    </data>
+</a:model>
+<a:datagrid model="mdlNews" options="move|size">
+    <a:each match="[news]">
+        <a:column caption="Icon" type="icon" width="40" value="newspaper.png" />
+        <a:column caption="Date" value="[@date]" width="70" />
+        <a:column caption="Title" width="180" value="[@title]" />
+        <a:column caption="Subtitle" value="[@subtitle]" width="100" />
+    </a:each>
+</a:datagrid>
+    </body>
+</html>
